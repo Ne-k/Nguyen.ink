@@ -50,11 +50,11 @@ const FEATURED_REPOS = ["2BDetermined-7034/2024-Crescendo"];
 const MANUAL_PROJECTS: Project[] = [
   {
     id: -1,
-    name: "Razmai",
+    name: "Rasmai",
     description:
       "Discord bot for maimai DX. It reads your DX NET scores, works out where your skill actually sits, and ranks the charts where a realistic push gains the most rating. Rendered score images in Discord, plus a dashboard on the web.",
-    url: "https://razmai.nguyen.ink",
-    homepage: "https://razmai.nguyen.ink",
+    url: "https://raszmai.nguyen.ink",
+    homepage: "https://rasmai.nguyen.ink",
     language: "TypeScript",
     stars: 0,
     forks: 0,
