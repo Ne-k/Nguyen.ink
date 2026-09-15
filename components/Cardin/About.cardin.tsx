@@ -8,8 +8,8 @@ const facts = [
   },
   {
     label: "Working",
-    value: "Instructor at Coding With Kids",
-    detail: "Teaching programming to students who are quicker than I expect",
+    value: "C/C++ embedded developer at the OPEnS Lab",
+    detail: "Firmware for Loom V4 and the Evaporometer, at Oregon State",
   },
   {
     label: "Volunteering",
