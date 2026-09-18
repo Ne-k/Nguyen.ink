@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 
+import { DiscordEmbed } from "../../components/Misc/DiscordEmbed.component";
 import { LandingHero } from "../../components/Landing";
 import { Seo } from "../../components/Misc/Seo.component";
+import { buttons, gallery, headline } from "../../lib/discord";
 
 const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
@@ -14,6 +16,27 @@ const LandingPage: NextPage = () => {
         url="https://nguyen.ink"
         image="https://nguyen.ink/assests/og-nguyen.png"
         imageAlt="nguyen.ink"
+      />
+
+      <DiscordEmbed
+        pieces={[
+          gallery([
+            {
+              url: "https://nguyen.ink/assests/og-nguyen.png",
+              description: "nguyen.ink",
+            },
+          ]),
+          headline(
+            "nguyen.ink",
+            "https://nguyen.ink",
+            ["Two people, one domain. Pick a subdomain."],
+            { image: "https://nguyen.ink/assests/icon-n-180.png" },
+          ),
+          buttons(
+            { label: "Cardin", url: "https://cardin.nguyen.ink" },
+            { label: "Dylan", url: "https://dylan.nguyen.ink" },
+          ),
+        ]}
       />
 
       <main>
