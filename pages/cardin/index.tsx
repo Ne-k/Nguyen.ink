@@ -12,7 +12,7 @@ import {
 } from "../../components/Cardin";
 import { DiscordEmbed } from "../../components/Misc/DiscordEmbed.component";
 import { Seo } from "../../components/Misc/Seo.component";
-import { buttons, gallery, headline } from "../../lib/discord";
+import { buttons, gallery, headline, rule, say } from "../../lib/discord";
 import { getProjects } from "../../lib/github";
 import type { Project } from "../../lib/github";
 import { site } from "../../lib/site";
@@ -60,15 +60,22 @@ const CardinPage: NextPage<CardinPageProps> = ({ projects }) => {
 
       <DiscordEmbed
         pieces={[
+          headline(
+            site.name,
+            site.url,
+            [`${site.role} · ${site.location}`],
+            { image: "https://cardin.nguyen.ink/assests/icon-cn-180.png" },
+            2,
+          ),
+          rule(),
+          say("**Writes**  Python, TypeScript, Java, C++"),
+          say("**Works on**  Penetration testing, digital forensics, backends"),
           gallery([
             {
               url: "https://cardin.nguyen.ink/assests/og-image.png",
               description: `${site.name}, ${site.role}`,
             },
           ]),
-          headline(site.name, site.url, [`${site.role} · ${site.location}`], {
-            image: "https://cardin.nguyen.ink/assests/icon-cn-180.png",
-          }),
           buttons(
             { label: "Projects", url: `${site.url}/#projects` },
             { label: "GitHub", url: site.github },

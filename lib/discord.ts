@@ -53,15 +53,17 @@ export function say(content: string): Text {
 /**
  * The headline: a linked title, whatever lines follow it, and a picture or a button off to the side.
  *
- * The thing off to the side is required, so it is an argument rather than an option.
+ * The thing off to the side is required, so it is an argument rather than an option. `level` is the
+ * markdown heading size, 1 being the largest; a card that is mostly title wants 2 or 3.
  */
 export function headline(
   title: string,
   url: string,
   lines: string[],
   aside: { image: string } | { label: string; url: string },
+  level: 1 | 2 | 3 = 1,
 ): Section {
-  const heading = `# **[${plain(title)}](${href(url)})**`;
+  const heading = `${"#".repeat(level)} **[${plain(title)}](${href(url)})**`;
   const accessory: Thumbnail | Button =
     "image" in aside
       ? { type: 11, media: { url: aside.image } }
